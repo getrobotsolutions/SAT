@@ -162,7 +162,7 @@ $.getJSON(queryURL, function (data) {
     var text = firstResult.text;
     //alert(temp);
 
-    $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup> Forecast calls for '+text);
+    $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°F</sup> Forecast calls for '+text);
 
 })
 
