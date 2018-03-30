@@ -147,8 +147,8 @@ function ShowPopup(){
 
 
 
-var city = "Muscat";
-var searchtext = "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='c'";
+var city = "San Antonio";
+var searchtext = "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "') and u='f'";
 var queryURL = "https://query.yahooapis.com/v1/public/yql?q="+ searchtext + "&format=json";
 
 $.getJSON(queryURL, function (data) {
