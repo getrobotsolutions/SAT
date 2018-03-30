@@ -96,8 +96,14 @@ function UpdateCamImage()
 var isPhotoTaken = false;
 function TakePhoto()
 {   
-   /* window.external.SetVolume(1);
-    PlaySpeech('Please look at the camera on the top of the Robot''s head.');*/
+    window.external.SetVolume(1);
+    if(readCookie("CurrentLanguage")=="English"){
+        window.external.ChangeLanguage("en-gb");
+        PlaySpeech('Look at the camera on the top of the robots head');
+    }
+    else if(){
+
+    }
     isPhotoTaken = false;
     
     // 촬영 버튼 이미지 변경 & 숨김
