@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/>
+
+    <script language="JavaScript" type="text/javascript" src="Scripts/BaseCommand.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/BaseEvent.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/LogConsole.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/custom.js"></script>
+    <!--<script language="JavaScript" type="text/javascript" src="Scripts/Language.js"></script>-->
+
+    <script language="JavaScript" type="text/javascript" src="maincontents.js"></script>
+    <script src="boots/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="boots/css/bootstrap.min.css">
+
+
+
+    <link href="css/Main.css" rel="stylesheet" type="text/css"/>
+
+
+
+</head>
+
+
+<body onload="JSMain()" onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
+
+<header>
+    <div class="logo">
+        <img onclick="GoHome()" src="assets/logo.png">
+    </div>
+
+    <span class="col-sm-4 " style="float: right; background-color: yellow">
+          <div id="content_air"></div>
+          <div id="content_date"></div>
+          <span id="temp"></span>
+      </span>
+
+</header>
+
+<nav>
+
+    <div class="nav-language">
+        <button onclick="LanguageChange('english');" id="btn_english" class="btn-english">English</button>
+        <button onclick="LanguageChange('spanish');" id="btn_spanish" class="btn-spanish">Español</button>
+    </div>
+</nav>
+
+<section class="main-content">
+    <div class="main-menu-matrix">
+        <table>
+            <tr>
+                <td>
+                    <button onclick="FC_ContentsCall('Eats')" class="r0c0">
+                        <img src="assets/icons/eat.png"><br>
+                        <a id="txt_eat">Restaurants</a>
+                    </button>
+                </td>
+                <td>
+                    <button onclick="FC_ContentsCall('Shopping')" class="r0c1">
+                    <img src="assets/icons/cart.png"><br>
+                        <a id="txt_shopping">Shopping</a>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="FC_ContentsCall('Avatar')" class="r0c2">
+                    <img src="assets/icons/user.png"><br>
+                        <a id="txt_robot_avatar">Robot Avatar</a>
+                    </button>
+                </td>
+                <td>
+                    <button onclick="FC_ContentsCall('Selfie')" class="r1c0">
+                    <img src="assets/icons/camera.png"><br>
+                        <a id="txt_take_selfie">Take Selfie</a>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="main-menu-vote" >
+        <p class="vote-title" id="vote-title">Vote for who will win?</p>
+        <table>
+            <tr>
+                <td>
+                    <button onclick="votePress('t1')">
+                        <img src="assets/vote_back_t1.png" alt="back" >
+                        <p class="txt-vote-score" id="t1-vote"></p>
+                    </button>
+                </td>
+                <td>
+                    <button onclick="votePress('t2')">
+                        <img src="assets/vote_back_t2.png" alt="back" >
+                        <p class="txt-vote-score" id="t2-vote"></p>
+                    </button>
+                </td>
+                <td>
+                    <button onclick="votePress('t3')">
+                        <img src="assets/vote_back_t3.png" alt="back" >
+                        <p class="txt-vote-score" id="t3-vote"></p>
+                    </button>
+                </td>
+                <td>
+                    <button onclick="votePress('t4')">
+                        <img src="assets/vote_back_t4.png" alt="back" >
+                        <p class="txt-vote-score" id="t4-vote"></p>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>voteInit()</script>
+    <div class="concessionaires" >
+        <p>Robot Proudly Funded by SAT's Concessionaires</p>
+    </div>
+</section>
+
+<footer>
+    <img src="assets/slide1.png" alt="slider1">
+    <img src="assets/bottom-line.png" onclick="ShowPopup()">
+</footer>
+<div id="dialog-overlay"></div>
+<div id="dialog-box">
+
+</div>
+
+<script type="application/javascript">
+    if(readCookie("CurrentLanguage") === "English")
+    {
+        LanguageChange('english');
+    }
+    else if(readCookie("CurrentLanguage") === "Spanish")
+    {
+        LanguageChange('spanish');
+    }
+</script>
+
+</body>
+</html>
