@@ -179,6 +179,9 @@ footer img {
 	margin: auto;
 }
 
+.date-time{
+	float: right !important;margin-top: 20px;float: right;text-align: center;font-size: 33px;color: black;
+}
 
 a.button {
 	/* styles for button */

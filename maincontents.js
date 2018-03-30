@@ -1,4 +1,7 @@
 ﻿
+$(document).ready(function(){
+ShowTime();
+});
 var speak = new Array( );
 
 function LanguageChange(lang)
