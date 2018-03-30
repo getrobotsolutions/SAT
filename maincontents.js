@@ -1,6 +1,11 @@
 ﻿
 $(document).ready(function(){
 ShowTime();
+
+     $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
+      $('#dialog-overlay, #dialog-box').hide();   
+      return false;
+    });
 });
 var speak = new Array( );
 
