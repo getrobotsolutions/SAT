@@ -101,7 +101,9 @@ function TakePhoto()
         window.external.ChangeLanguage("en-gb");
         PlaySpeech('Look at the camera on the top of the robots head');
     }
-    else if(){
+    else if(readCookie("CurrentLanguage")=="Spanish"){
+        window.external.ChangeLanguage("es-us");
+        PlaySpeech("Mira la cámara en la parte superior de la cabeza de los robots");
 
     }
     isPhotoTaken = false;
