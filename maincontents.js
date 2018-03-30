@@ -152,7 +152,7 @@ var searchtext = "select item.condition from weather.forecast where woeid in (se
 var queryURL = "https://query.yahooapis.com/v1/public/yql?q="+ searchtext + "&format=json";
 
 $.getJSON(queryURL, function (data) {
-    alert("test");
+    //alert("test");
     var results = data.query.results;
     var firstResult = results.channel.item.condition;
     console.log(firstResult);
@@ -160,7 +160,7 @@ $.getJSON(queryURL, function (data) {
     var location = 'Unknown'; // not returned in response
     var temp = firstResult.temp;
     var text = firstResult.text;
-    alert(temp);
+    //alert(temp);
 
     $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°C</sup> Forecast calls for '+text);
 
