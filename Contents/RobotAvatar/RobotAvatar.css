@@ -33,26 +33,29 @@ body {
 	padding: 0;
 	position: absolute;
 	/*top: 200px;*/
+	top: 310px;
 	margin-bottom: 50px;
 }
 .bg img{
 	width: 1080px;
-	height: 715px;
+	/*height: 715px;*/
 }
 
 .canvas {
 	position: absolute;
-    left: 283px;
+    /*left: 283px;*/
     /* z-index: -2; */
-    top: 560px;
+    /*top: 560px;
     height: 394px;
-    width: 281px;
+    width: 281px;*/
+    left: 280px;
+    top: 423px;
 }
 
 .frame {
 	position: absolute;
-	left: 225px;
-	top: 560px;
+	left: 327px;
+    top: 428px;
 }
 
 #frame {
@@ -62,9 +65,11 @@ body {
 
 .number {
 	position: absolute;
-	left: 362px;
-	/*top: 549px;*/
-	top:730px;
+	/*left: 362px;
+	/*top: 549px;
+	top:730px;*/
+	left: 463px;
+    top: 578px;
 }
 
 #number {
@@ -73,13 +78,13 @@ body {
 
 .shot {
 	position: absolute;
-    left: 284px;
+    left: 384px;
     /* top: 474px; */
-    top: 625px;
+    top: 503px;
 }
 .shot img{
 	width: 280px;
-    height: 401px;
+    /*height: 401px;*/
 }
 
 .delete {
@@ -115,12 +120,12 @@ footer {
 }
 #change-us, #change-ar{text-decoration: none;}
 .deltext{
-	color: white;
+	    color: white;
     position: absolute;
-    top: 260px;
-    right: 40px;
+    top: 700px;
+    left: 350px;
     font-size: 35px;
-    width: 288px;
+    width: 388px;
     line-height: 79px;
     text-align: center;
     }
