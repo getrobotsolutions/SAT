@@ -22,6 +22,7 @@ function OnJoystickControlled(strPara){
 		
 	}
 	if(btn_info[3] == '1'){
+		alert("Button Y Pressed");
 		window.history.back();
 		
 	}
