@@ -22,7 +22,7 @@ function OnJoystickControlled(strPara){
 		
 	}
 	if(btn_info[3] == '1'){
-		FC_ContentsCall('Home');
+		location.href = "../../maincontents.htm";
 		
 	}
 
