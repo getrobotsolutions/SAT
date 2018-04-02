@@ -1,4 +1,21 @@
-﻿
+﻿//-----------------------------------------------------
+//Redirects to homepage after 1 minute of not interaction
+//-----------------------------------------------------
+
+function redirect(){
+    window.location.href = "../../maincontents.htm";
+}
+var initial=setTimeout(redirect,60000);
+
+$(document).click(function(event) {
+    clearTimeout( initial );
+    initial=setTimeout(redirect,12000);
+});
+//-----------------------------------------------------
+//  To stop warning speech loop
+//-----------------------------------------------------
+clearInterval(noteSpeechLoop());
+//-----------------------------------------------------
 function LanguageChange(lang)
 {
     if(lang === "english")

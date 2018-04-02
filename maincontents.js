@@ -9,6 +9,9 @@ ShowTime();
 });
 var speak = new Array( );
 
+
+setInterval(noteSpeechLoop(), 20000);
+
 function LanguageChange(lang)
 {
     if(lang === "english")
@@ -136,7 +139,7 @@ function voteInit() {
 }
 
 function OnUserApproached()
-{   PlaySpeech("Hi, I’m Amelia, Please remove FINAL FOUR programs from checked bags and place inside your carry-on bag to prevent delays in processing baggage.");
+{   //PlaySpeech("Hi, I’m Amelia, Please remove FINAL FOUR programs from checked bags and place inside your carry-on bag to prevent delays in processing baggage.");
     /*if(readCookie("lang")=="english"){
       window.external.ChangeLanguage("en-gb");
       window.external.SetVolume(1);
@@ -238,4 +241,11 @@ function getGetOrdinal(n) {
     var s=["th","st","nd","rd"],
         v=n%100;
     return n+'<sup>'+(s[(v-20)%10]||s[v]||s[0])+'</sup>';
+}
+
+
+function noteSpeechLoop() {
+    PlaySpeech("Please remove FINAL FOUR programs from checked bags and place inside your carry-on bag to prevent delays in processing baggage.");
+    //alert("speech");
+
 }
