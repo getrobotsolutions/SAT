@@ -12,10 +12,6 @@ $(document).click(function(event) {
     initial=setTimeout(redirect,12000);
 });
 //-----------------------------------------------------
-//  To stop warning speech loop
-//-----------------------------------------------------
-clearInterval(noteSpeechLoop());
-//-----------------------------------------------------
 function LanguageChange(lang)
 {
     if(lang === "english")
