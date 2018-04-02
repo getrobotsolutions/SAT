@@ -173,38 +173,43 @@ var searchtext = "select item.condition from weather.forecast where woeid in (se
 var queryURL = "https://query.yahooapis.com/v1/public/yql?q="+ searchtext + "&format=json";
 
 $.getJSON(queryURL, function (data) {
-    //alert("test");
+
     var results = data.query.results;
     var firstResult = results.channel.item.condition;
     console.log(firstResult);
 
+
     var location = 'Unknown'; // not returned in response
     var temp = firstResult.temp;
     var text = firstResult.text;
-    //alert(temp);
+    var image =  firstResult.code;
+    var loc = 'https://s.yimg.com/zz/combo?a/i/us/we/52/'+image+'.gif' ;
 
-    $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°F</sup> Forecast calls for '+text);
+    // $('#temp').append('The temperature is <strong>' + temp + '</strong><sup>°F</sup> Forecast calls for '+text);
 
-})
+    $('#condition').append(text);
+    $('#temp').append(temp+ '</strong><sup>°F</sup>');
+
+    $('#image-zoom').attr("src",loc);
+});
 
 function ShowTime()
 {
     var dt = new Date();
-    //formatAMPM(dt);
-    //var localeSpecificTime = dt.toLocaleTimeString();
-    //localeSpecificTime=localeSpecificTime.replace(/:\d+ /, ' ');
-    //document.getElementById("content_air") .innerHTML = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }) ;//dt.getHours(00) + ":" + dt.getMinutes(00);//localeSpecificTime;
-    document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;//dt.getHours() + ":" + dt.getMinutes();//localeSpecificTime;
+    // formatAMPM(dt);
+    document.getElementById("content_air") .innerHTML = formatAMPM(dt) ;
     document.getElementById("content_date") .innerHTML = formatDate(dt);
-    window.setTimeout("ShowTime()", 30000); // Here 1000(milliseconds) means one 1 Sec
+
 }
 function formatAMPM(date) {
 
     var hours = date.getHours();
     var minutes = date.getMinutes();
-    /*var ampm = hours >= 12 ? 'PM' : 'AM';
+
+
+    var ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'*/
+    hours = hours ? hours : 12;
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     var dayName = days[date.getDay()];
@@ -212,8 +217,9 @@ function formatAMPM(date) {
     //dayName = date.toString().split(' ')[0];
     hours = hours <10? '0' +hours : hours;
     minutes = minutes < 10 ? '0'+minutes : minutes;
-    var strTime = ' ' + hours + ':' + minutes + ' ' + dayName;// + ampm;
+    var strTime = dayName + ' ' + hours + ':' + minutes + ' ' + ampm;
     return strTime;
+    //alert(strTime);
 }
 
 function formatDate(date){
