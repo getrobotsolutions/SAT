@@ -136,7 +136,7 @@ function voteInit() {
 }
 
 function OnUserApproached()
-{   PlaySpeech("Hi, I’m Amelia, how can I help you?");
+{   PlaySpeech("Hi, I’m Amelia, Please remove FINAL FOUR programs from checked bags and place inside your carry-on bag to prevent delays in processing baggage.");
     /*if(readCookie("lang")=="english"){
       window.external.ChangeLanguage("en-gb");
       window.external.SetVolume(1);
