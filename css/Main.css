@@ -14,7 +14,7 @@ body{
 	background-repeat: no-repeat;
 	width: 1080px;
 	height: 1920px;
-	//overflow: hidden;
+	overflow: hidden;
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #ffffff;
 }
