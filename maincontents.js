@@ -24,7 +24,7 @@ function LanguageChange(lang)
 
         speak[0] = "Enjoy your time at some of our great restaurants.";
         speak[1] = "Spend some time at some of our shops.";
-        speak[2] = "Say Cheese!";
+        speak[2] = "Please touch the camera icon below and Say Cheese!";
         speak[3] = "Smile you are about to become a robot.";
 
 
@@ -48,7 +48,7 @@ function LanguageChange(lang)
 
         speak[0] = "Disfruta de tu tiempo en algunos de nuestros excelentes restaurantes.";
         speak[1] = "Pase tiempo en algunas de nuestras tiendas.";
-        speak[2] = "¡Decir queso!";
+        speak[2] = "Toca el icono de la cámara a continuación y ¡Di queso!";
         speak[3] = "Sonríe, estás a punto de convertirte en un robot.";
     }
 
