@@ -1,12 +1,5 @@
 ﻿
-$(document).ready(function(){
-ShowTime();
 
-     $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {   
-      $('#dialog-overlay, #dialog-box').hide();   
-      return false;
-    });
-})
 
 var speak = new Array( );
 
@@ -27,12 +20,13 @@ function LanguageChange(lang)
         document.getElementById("txt_shopping").innerHTML = "Shopping";
         document.getElementById("txt_take_selfie").innerHTML = "Take Selfie";
         document.getElementById("txt_robot_avatar").innerHTML = "Robot Avatar";
-        document.getElementById("vote-title").innerHTML = "Vote for who will win?";
+        // document.getElementById("vote-title").innerHTML = "Vote for who will win?";
 
         speak[0] = "Enjoy your time at some of our great restaurants.";
         speak[1] = "Spend some time at some of our shops.";
         speak[2] = "Say Cheese!";
         speak[3] = "Smile you are about to become a robot.";
+
 
     }
     else if (lang === "spanish")
@@ -49,7 +43,8 @@ function LanguageChange(lang)
         document.getElementById("txt_shopping").innerHTML = "Compras";
         document.getElementById("txt_take_selfie").innerHTML = "Tomar Selfie";
         document.getElementById("txt_robot_avatar").innerHTML = "Robot Avatar";
-        document.getElementById("vote-title").innerHTML = "Vote por quién ganará?";
+        // document.getElementById("vote-title").innerHTML = "Vote por quién ganará?";
+
 
         speak[0] = "Disfruta de tu tiempo en algunos de nuestros excelentes restaurantes.";
         speak[1] = "Pase tiempo en algunas de nuestras tiendas.";
@@ -168,6 +163,14 @@ function ShowPopup(){
     document.getElementById('dialog-box').innerHTML = '<a href="#" class="button">Close</a><div class="dialog-content"><div id="dialog-message"><img width="800" src="assets/contact.png"/></div></div>';
 }
 
+$(document).ready(function(){
+    ShowTime();
+
+    $('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {
+        $('#dialog-overlay, #dialog-box').hide();
+        return false;
+    });
+})
 
 
 var city = "San Antonio";
