@@ -6,11 +6,10 @@ ShowTime();
       $('#dialog-overlay, #dialog-box').hide();   
       return false;
     });
-});
+})
+
 var speak = new Array( );
 
-
-//setInterval(noteSpeechLoop(), 6000);
 
 function LanguageChange(lang)
 {
