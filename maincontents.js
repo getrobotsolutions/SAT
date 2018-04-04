@@ -133,18 +133,8 @@ function voteInit() {
 }
 
 function OnUserApproached()
-{   //PlaySpeech("Hi, I’m Amelia, Please remove FINAL FOUR programs from checked bags and place inside your carry-on bag to prevent delays in processing baggage.");
-    /*if(readCookie("lang")=="english"){
-      window.external.ChangeLanguage("en-gb");
-      window.external.SetVolume(1);
-      PlaySpeech("Hi, I’m Morriya, how can I help you?");
-      
-    }
-    else if (readCookie("lang")=="arabic") {
-      window.external.ChangeLanguage("ar-eg");
-      window.external.SetVolume(0.4);
-      PlaySpeech("مَرْحَبَاً ، أَنَا مُرِيَةْ. كَيْفَ يُمْكِنُنِيْ أنْ أُسَاعِدَكْ؟");
-    }*/
+{
+    PlaySpeech("Hi, I’m Amelia, thanks for travelling with us, please press the button below.");
 }
 
 
