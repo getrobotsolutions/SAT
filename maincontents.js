@@ -136,7 +136,7 @@ function voteInit() {
 
 function OnUserApproached()
 {
-    PlaySpeech("Hi, I’m Amelia, thanks for travelling with us, please press the button below.");
+    PlaySpeech("Hi, I'm Erin, thanks for traveling with us.  To get started, please press a button below.");
 }
 
 
